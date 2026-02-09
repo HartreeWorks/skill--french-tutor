@@ -208,7 +208,3 @@ If `state.json` does not exist, create it from template:
   "last_session": null
 }
 ```
-
-## Update check
-
-This skill is managed by [skills.sh](https://skills.sh). To check for updates, run `npx skills update`.
