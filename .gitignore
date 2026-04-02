@@ -1,1 +1,4 @@
-state.json
+# No longer excluding state - moved to data/
+
+# Private local data (not published)
+data/

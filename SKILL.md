@@ -50,17 +50,12 @@ Default: Casual and friendly, unless the content suggests a formal context.
 **Output format**:
 
 1. **Translation** (displayed normally)
-2. **Translation** (in code block for easy copying)
-3. **Learning notes** (brief observations to help learning)
-4. **Vocabulary offer**: Ask if any words should be logged to the vocabulary list
+2. **Learning notes** (brief observations to help learning)
+3. **Vocabulary offer**: Ask if any words should be logged to the vocabulary list
 
 **Example output**:
 
 > Je suis ravi de vous rencontrer.
-
-```
-Je suis ravi de vous rencontrer.
-```
 
 **Notes**: *Ravi* (delighted) is more formal than *content* (happy). Use *ravi(e) de* + infinitive for "delighted to".
 
@@ -134,17 +129,16 @@ Make exercises difficult with no hints.
 ### Output format for corrections
 
 1. **Corrected text** (displayed normally)
-2. **Corrected text** (in code block for copying)
-3. **Explanations** (grouped by correction type)
-4. **Tone** (commentary and alternatives)
-5. **Mochi cards** (table format, with creation offer)
-6. **Practice** (1-2 exercises)
+2. **Explanations** (grouped by correction type)
+3. **Tone** (commentary and alternatives)
+4. **Mochi cards** (table format, with creation offer)
+5. **Practice** (1-2 exercises)
 
 ---
 
 ## State tracking
 
-Maintain state in `~/.claude/skills/french-tutor/state.json`:
+Maintain state in `~/.claude/skills/french-tutor/data/state.json`:
 
 ```json
 {
@@ -160,7 +154,7 @@ Maintain state in `~/.claude/skills/french-tutor/state.json`:
 When offering to log vocabulary:
 1. Read current state
 2. Add new entries with date
-3. Write back to state.json
+3. Write back to data/state.json
 
 Entry format:
 ```json
@@ -194,12 +188,12 @@ Input received
          ├── Comment on tone
          ├── Draft Mochi cards → Show for review → Create on approval
          ├── Provide practice exercises
-         └── Update state.json
+         └── Update data/state.json
 ```
 
 ## State file initialisation
 
-If `state.json` does not exist, create it from template:
+If `data/state.json` does not exist, create it from template:
 ```json
 {
   "vocabulary": [],
